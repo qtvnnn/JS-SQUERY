@@ -1,0 +1,38 @@
+body{
+    font-family: 'MISA-Regular';
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+
+@font-face{
+    font-family: 'MISA-Regular';
+    src: url('../../content/font/GoogleSans-Regular.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'MISA-Bold';
+    src: url('../../content/font/GoogleSans-Bold.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'MISA-Italic';
+    src: url('../../content/font/GoogleSans-Italic.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #bbbbbb;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #6c757d;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}

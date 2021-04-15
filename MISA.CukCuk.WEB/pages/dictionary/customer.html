@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' translate="no">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Phần mềm quản lý cửa hàng CUKCUK.VN</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='/PT1/Html/MISA.CukCuk.WEB/css/common/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/PT1/Html/MISA.CukCuk.WEB/css/common/layout.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/PT1/Html/MISA.CukCuk.WEB/css/common/dialog.css'>
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='/PT1/Html/MISA.CukCuk.WEB/css/pages/dictionary/customer.css'>
+</head>
+
+<body>
+    <div class="body-left">
+        <div class="sidebar">
+            <div class="toggle"></div>
+            <div class="logo"></div>
+        </div>
+        <div class="menu">
+            <div class="menu-item">
+                <div class="icon overview"></div>
+                <div class="item-name">Tổng quan</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon report"></div>
+                <div class="item-name">Báo cáo</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon purchase"></div>
+                <div class="item-name">Mua hàng</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon list-customer"></div>
+                <div class="item-name">Danh mục khách hàng</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon list-employee"></div>
+                <div class="item-name">Danh mục nhân viên</div>
+            </div>
+            <div class="menu-item">
+                <div class="icon setting"></div>
+                <div class="item-name">Thiết lập hệ thống</div>
+            </div>
+        </div>
+    </div>
+    <div class="body-right">
+        <div class="header">
+            <div class="header-left">
+                <div class="list-restaurant">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-select btn-list-restaurant" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nhà hàng biển đông
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Kho tổng</a>
+                            <a class="dropdown-item" href="#">Đại dương xanh</a>
+                            <a class="dropdown-item" href="#">Nhà hàng biển đông</a>
+                            <a class="dropdown-item" href="#">Wine house</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="account">
+                    <div class="avatar"></div>
+                    <div class="account-name">
+                        <span>Nguyễn Văn Mạnh</span>
+                    </div>
+                </div>
+                <div class="account-setting"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <div class="content-header-left">
+                    <span class="menu-item-selected">Danh sách nhân viên</span>
+                </div>
+                <div class="content-header-right">
+                    <a class="btn btn-primary btn-add-employee" href="#" role="button">
+                        <div class="icon icon-add-employee"></div>
+                        <div class="item-name">Thêm nhân viên</div>
+                    </a>
+                </div>
+            </div>
+            <div class="customer-filter">
+                <div class="customer-filter-left">
+                    <div class="input-group input-filter">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <div class="icon icon-search"></div>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control inputbox-filter" placeholder="Tìm kiếm nhân viên"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="select-filter-department">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-select btn-list-department" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Tất cả phòng ban
+                            </button>
+                            <div class="dropdown-menu menu-department" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Kho tổng</a>
+                                <a class="dropdown-item" href="#">Đại dương xanh</a>
+                                <a class="dropdown-item" href="#">Nhà hàng biển đông</a>
+                                <a class="dropdown-item" href="#">Wine house</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-filter-position">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-select  btn-list-position" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Tất cả vị trí
+                            </button>
+                            <div class="dropdown-menu menu-position" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Kho tổng</a>
+                                <a class="dropdown-item" href="#">Đại dương xanh</a>
+                                <a class="dropdown-item" href="#">Nhà hàng biển đông</a>
+                                <a class="dropdown-item" href="#">Wine house</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customer-filter-right">
+                    <a class="btn btn-reset-filter" href="#" role="button">
+                        <div class="icon icon-reset-filter"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="data-table-employee">
+                <div class="contain-table">
+                    <table class="table table-container">
+                        <thead>
+                            <tr>
+                                <td scope="col">Mã nhân viên</td>
+                                <td scope="col">Họ và tên</td>
+                                <td scope="col">Giới tính</td>
+                                <td scope="col">Ngày sinh</td>
+                                <td scope="col">Điện thoại</td>
+                                <td scope="col">Email</td>
+                                <td scope="col">Chức vụ</td>
+                                <td scope="col">Phòng ban</td>
+                                <td scope="col">Mức lương cơ bản</td>
+                                <td scope="col">Tình trạng công việc</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">NV123456</td>
+                                <td>Nguyễn Văn Long</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>longnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>10,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV111111</td>
+                                <td>Nguyễn Văn Bát</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>batnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>13,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV222222</td>
+                                <td>Trần Không Bít</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>btttk@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>15,000,000</td>
+                                <td>Đã nghỉ việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV123456</td>
+                                <td>Nguyễn Văn Long</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>longnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>10,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV111111</td>
+                                <td>Nguyễn Văn Bát</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>batnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>13,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV222222</td>
+                                <td>Trần Không Bít</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>btttk@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>15,000,000</td>
+                                <td>Đã nghỉ việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV123456</td>
+                                <td>Nguyễn Văn Long</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>longnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>10,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV111111</td>
+                                <td>Nguyễn Văn Bát</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>batnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>13,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV222222</td>
+                                <td>Trần Không Bít</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>btttk@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>15,000,000</td>
+                                <td>Đã nghỉ việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV123456</td>
+                                <td>Nguyễn Văn Long</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>longnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>10,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV111111</td>
+                                <td>Nguyễn Văn Bát</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>batnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>13,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV222222</td>
+                                <td>Trần Không Bít</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>btttk@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>15,000,000</td>
+                                <td>Đã nghỉ việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV123456</td>
+                                <td>Nguyễn Văn Long</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>longnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>10,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV111111</td>
+                                <td>Nguyễn Văn Bát</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>batnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>13,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV222222</td>
+                                <td>Trần Không Bít</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>btttk@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>15,000,000</td>
+                                <td>Đã nghỉ việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV123456</td>
+                                <td>Nguyễn Văn Long</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>longnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>10,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV111111</td>
+                                <td>Nguyễn Văn Bát</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>batnv@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>13,000,000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">NV222222</td>
+                                <td>Trần Không Bít</td>
+                                <td>Nam</td>
+                                <td>12/05/1995</td>
+                                <td>0635145876</td>
+                                <td>btttk@gmail.com</td>
+                                <td>Nhân viên</td>
+                                <td>Phòng nhân sự</td>
+                                <td>15,000,000</td>
+                                <td>Đã nghỉ việc</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <footer class="footer-table">
+                    <div class="row">
+                        <div class="col-sm footer-table-left">
+                            <span class="text-muted">Hiển thị 1-10/1000 nhân viên</span>
+                        </div>
+                        <div class="col-sm footer-table-center">
+                            <div class="paging-left">
+                                <a class="btn btn-paging-first" href="#" role="button">
+                                    <i class="fa fa-angle-double-left icon-paging-first" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-default" href="#" role="button">
+                                    <i class="fa fa-chevron-left icon-paging-previous" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="paging-number">
+                                <a class="btn btn-paging-number-item active" href="#" role="button">1</a>
+                                <a class="btn btn-paging-number-item" href="#" role="button">2</a>
+                                <a class="btn btn-paging-number-item" href="#" role="button">3</a>
+                                <a class="btn btn-paging-number-item" href="#" role="button">4</a>
+                            </div>
+                            <div class="paging-right">
+                                <a class="btn btn-default" href="#" role="button">
+                                    <i class="fa fa-chevron-right icon-paging-next" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-paging-last" href="#" role="button">
+                                    <i class="fa fa-angle-double-right  icon-paging-last" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm footer-table-right">
+                            <span class="text-muted">10 nhân viên/trang</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div id="dlgCustomerDetail" class="dialog dialog-hide">
+            <div class="model"></div>
+            <div class="dialog-content">
+                <div class="dialog-header form-group">
+                    <div class="dialog-title">THÔNG TIN KHÁCH HÀNG</div>
+                    <div class="dialog-close-button">&#x2715;</div>
+                </div>
+                <div class="dialog-body">
+                    <div class="row  form-group">
+                        <div class="col">
+                            <label>Mã khách hàng</label>
+                            <input class="form-control" id="txtCustomerCode" type="text" />
+                        </div>
+                        <div class="col">
+                            <label>Họ và tên</label>
+                            <input class="form-control" id="txtFullName" type="text" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Giới tính</label>
+                            <select class="form-control" id='cbGender'>
+                                <option value="1">Nam</option>
+                                <option value="0">Nữ</option>
+                                <option value="2">Không xác định</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Ngày sinh</label>
+                            <input class="form-control" id="dtDateOfBirth" type="date" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Số điện thoại</label>
+                            <input class="form-control" id="txtPhoneNumber" type="text" />
+                        </div>
+                        <div class="col">
+                            <label>Email</label>
+                            <input class="form-control" id="txtEmail" type="text" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Chức vụ</label>
+                            <select class="form-control" id='txtPositionName'>
+                                <option value="3700cc49-55b5-69ea-4929-a2925c0f334d">Giám đốc</option>
+                                <option value="25c6c36e-1668-7d10-6e09-bf1378b8dc91">Thu ngân</option>
+                                <option value="148ed882-32b8-218e-9c20-39c2f00615e8">Nhân viên Marketting</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Phòng ban</label>
+                            <select class="form-control" id='txtDepartmentName'>
+                                <option value="469b3ece-744a-45d5-957d-e8c757976496">Phòng nhân sự</option>
+                                <option value="142cb08f-7c31-21fa-8e90-67245e8b283e">Phòng Marketting</option>
+                                <option value="17120d02-6ab5-3e43-18cb-66948daf6128">Phòng đào tạo</option>
+                                <option value="4e272fc4-7875-78d6-7d32-6a1673ffca7c">Phòng Công nghệ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Mức lương cơ bản</label>
+                            <input class="form-control" id="txtSalary" type="text" />
+                        </div>
+                        <div class="col">
+                            <label>Tình trạng công việc</label>
+                            <select class="form-control" id='cbWorkStatus'>
+                                <option value="0">Đã nghỉ việc</option>
+                                <option value="1">Thực tập sinh</option>
+                                <option value="2">Thử việc</option>
+                                <option value="3">Chính thức</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <input type="hidden" id="employeeId"/>
+                    <input type="hidden" id="typeRequest"/>
+                    <button id="btnDelete" class="btn btn-danger">Xóa</button>
+                    <button id="btnSave" class="btn btn-success">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script src="/PT1/Html/MISA.CukCuk.WEB/lib/jquery-3.6.0.min.js"></script>
+    <script src="/PT1/Html/MISA.CukCuk.WEB/js/pages/dictionary/customer.js"></script>
+</body>
+
+</html>

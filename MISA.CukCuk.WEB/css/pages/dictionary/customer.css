@@ -1,0 +1,217 @@
+.content-header {
+    height: 50px;
+    width: 100%;
+}
+
+.btn-select {
+    background-color: #ffffff;
+}
+
+.content-header-left {
+    height: 50px;
+    float: left;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.content-header-left .menu-item-selected {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.content-header-right {
+    height: 50px;
+    float: right;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.content-header-right .btn-add-employee {
+    background-color: #01B075;
+    display: flex;
+    align-items: center;
+    border-color: #01B075
+}
+
+.content-header-right .btn-add-employee .icon-add-employee {
+    width: 30px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    background-image: url('/PT1/Html/MISA.CukCuk.WEB/content/icon/add.png');
+}
+
+.customer-filter {
+    height: 50px;
+    width: 100%;
+}
+
+.customer-filter-left {
+    height: 50px;
+    float: left;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.customer-filter-left .input-filter,
+.customer-filter-left .select-filter-department {
+    padding-right: 15px;
+}
+
+.btn-list-department,
+.btn-list-position {
+    border: 1px solid #ced4da;
+    width: 200px;
+    text-align: left;
+}
+
+.select-filter-department .dropdown .dropdown-toggle::after,
+.select-filter-position .dropdown .dropdown-toggle::after {
+    position: relative;
+    float: right;
+    top: 10px;
+}
+
+.menu-department,
+.menu-position {
+    min-width: 200px !important;
+}
+
+.icon-search {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    background-image: url('/PT1/Html/MISA.CukCuk.WEB/content/icon/search.png');
+}
+
+.input-group-text {
+    border-right: none !important;
+    background-color: #ffffff !important;
+}
+
+.inputbox-filter {
+    border-left: none !important;
+}
+
+.customer-filter-right {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    float: right;
+    padding-right: 15px;
+}
+
+.customer-filter-right .btn-reset-filter {
+    background-color: #ffffff;
+    border-color: #bbbbbb;
+}
+
+.customer-filter-right .btn-reset-filter .icon-reset-filter {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+
+.customer-filter-right .btn-reset-filter .icon-reset-filter {
+    background-image: url('/PT1/Html/MISA.CukCuk.WEB/content/icon/refresh.png');
+}
+
+.data-table-employee{
+    padding-right: 13px;
+}
+
+/* scroll body table */
+.table-container {
+    height: 726px;
+    border-bottom: 5px solid #6c757d;
+    padding-bottom: 8px !important;
+}
+
+table {
+    display: flex;
+    flex-flow: column;
+}
+
+table tr {
+    cursor: pointer;
+}
+
+table thead {
+    width: calc(100% - 1.25em);
+}
+
+table tbody {
+    overflow-y: scroll;
+}
+
+table tbody tr {
+    width: 100%;
+}
+
+table thead,
+table tbody tr {
+    display: table;
+    table-layout: fixed;
+}
+
+/* end */
+
+.footer-table {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
+
+.footer-table .row {
+    width: 100% !important;
+    margin: 0;
+}
+
+.footer-table-left {
+    text-align: left;
+}
+
+.footer-table-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-table-center .paging-number .btn-paging-number-item {
+    background-color: #E9EBEE;
+    color: #6c757d;
+    border-radius: 50%;
+}
+
+.footer-table-center .paging-number .active {
+    background-color: #01B075;
+    color: #ffffff;
+}
+
+.icon-paging-first,
+.icon-paging-last,
+.icon-paging-next,
+.icon-paging-previous {
+    color: #6c757d;
+}
+
+.icon-paging-first,
+.icon-paging-last {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.footer-table-right {
+    text-align: right;
+}

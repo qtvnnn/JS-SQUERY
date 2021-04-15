@@ -1,0 +1,162 @@
+.body-left {
+    background-color: #ffffff;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #bbbbbb;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.body-left .sidebar {
+    height: 50px;
+    display: flex;
+}
+
+.body-left .sidebar .toggle {
+    width: 50px;
+    height: 50px;
+    background-image: url('../../content/img/toggle.png');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 18px center;
+}
+
+.body-left .sidebar .logo {
+    width: 138px;
+    height: 50px;
+    background-image: url('../../content/img/cukcuk-logo.png');
+    background-size: 126px;
+    background-repeat: no-repeat;
+    background-position: 0px 9px;
+}
+
+.body-left .menu {
+    position: relative;
+    flex: 1;
+    background-color: #ffffff;
+}
+
+.body-left .menu .menu-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.body-left .menu .menu-item:hover {
+    background-color: #e9e9e9;
+}
+
+.body-left .menu .menu-item .icon {
+    width: 50px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 18px center;
+}
+
+.body-left .menu .menu-item .item-name {
+    width: 150px;
+}
+
+.body-left .menu .menu-item .icon.overview {
+    background-image: url('../../content/icon/dashboard.png');
+
+}
+
+.body-left .menu .menu-item .icon.report {
+    background-image: url('../../content/icon/report.png');
+}
+
+.body-left .menu .menu-item .icon.purchase {
+    background-image: url('../../content/icon/dashboard.png');
+}
+
+.body-left .menu .menu-item .icon.list-customer {
+    background-image: url('../../content/icon/dic-employee.png');
+}
+
+.body-left .menu .menu-item .icon.list-employee {
+    background-image: url('../../content/icon/dic-employee.png');
+}
+
+.body-left .menu .menu-item .icon.setting {
+    background-image: url('../../content/icon/setting.png');
+}
+
+.body-right {
+    position: absolute;
+    left: 201px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.body-right .header {
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.body-right .content {
+    background-color: #ffffff;
+    position: absolute;
+    top: 51px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.header-left {
+    float: left;
+    padding-left: 20px;
+}
+
+.header-left .list-restaurant {
+    height: 48px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.header-left .list-restaurant .btn-list-select {
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 40px;
+}
+
+.header-right {
+    float: right;
+    padding-right: 10px;
+}
+
+.header-right .account {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.header-right .account .avatar {
+    width: 50px;
+    height: 51px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center;
+    background-image: url('../../content/icon/avatar-default.png');
+}
+
+.header-right .account .account-name {
+    margin: 0;
+}
+
+.header-right .account-setting {
+    float: right;
+    width: 50px;
+    height: 51px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center;
+    background-image: url('../../content/icon/option.png');
+}
